@@ -2,61 +2,57 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.8)
-    celluloid (0.17.3)
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-io (0.17.3)
-      celluloid (>= 0.17.2)
-      nio4r (>= 1.1)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.5)
-      timers (>= 4.1.1)
+    async-rack (0.5.1)
+      rack (~> 1.1)
+    cookiejar (0.3.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
-    domain_name (0.5.20160309)
-      unf (>= 0.0.5, < 1.0.0)
+    em-http-request (1.1.2)
+      addressable (>= 2.3.4)
+      cookiejar
+      em-socksify (>= 0.3)
+      eventmachine (>= 1.0.3)
+      http_parser.rb (>= 0.6.0)
+    em-socksify (0.3.1)
+      eventmachine (>= 1.0.0.beta.4)
+    em-synchrony (1.0.4)
+      eventmachine (>= 1.0.0.beta.1)
+    em-websocket (0.3.8)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
+    eventmachine (1.0.8)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    hashdiff (0.3.0)
+    git-version-bump (0.15.1)
+    goliath (1.0.4)
+      async-rack
+      em-synchrony (>= 1.0.0)
+      em-websocket (= 0.3.8)
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (= 0.6.0)
+      log4r
+      multi_json
+      rack (>= 1.2.2)
+      rack-contrib
+      rack-respond_to
     hashie (3.3.2)
-    hitimes (1.2.3)
-    http (1.0.2)
-      addressable (~> 2.3)
-      http-cookie (~> 1.0)
-      http-form_data (~> 1.0.1)
-      http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.2)
-      domain_name (~> 0.5)
-    http-form_data (1.0.1)
     http_parser.rb (0.6.0)
+    httpclient (2.7.1)
     json (1.8.3)
     json-generator (0.1.0)
       json-schema
-    json-schema (2.6.1)
-      addressable (~> 2.3.8)
+    json-schema (2.2.5)
     json-schema-generator (0.0.9)
       jsonpath
     jsonpath (0.5.8)
       multi_json
+    log4r (1.1.10)
     middleware (0.1.0)
     mime-types (2.99.1)
     multi_json (1.11.2)
     multipart-post (2.0.0)
-    nio4r (1.2.1)
-    pacto (0.4.0.rc3)
+    pacto (0.4.0.rc1)
       addressable (~> 2.3)
       faraday (~> 0.9)
       hashie (~> 3.0)
@@ -67,20 +63,21 @@ GEM
       multi_json (~> 1.8)
       swagger-core (~> 0.2, >= 0.2.1)
       thor (~> 0.19)
-      webmock (~> 1.18)
-    pacto-server (0.4.0.rc3)
-      pacto (= 0.4.0.rc3)
-      reel (~> 0.5)
+      webmock (~> 1.18, < 1.20.3)
+    pacto-server (0.4.0.rc1)
+      em-http-request (~> 1.1)
+      em-synchrony (~> 1.0)
+      goliath (~> 1.0)
+      pacto (= 0.4.0.rc1)
     rack (1.6.4)
+    rack-accept-media-types (0.9)
+    rack-contrib (1.4.0)
+      git-version-bump (~> 0.15)
+      rack (~> 1.4)
     rack-protection (1.5.3)
       rack
-    reel (0.6.0)
-      celluloid (>= 0.15.1)
-      celluloid-io (>= 0.15.0)
-      http (>= 0.6.0.pre)
-      http_parser.rb (>= 0.6.0)
-      rack
-      websocket-driver (>= 0.5.1)
+    rack-respond_to (0.9.8)
+      rack-accept-media-types (>= 0.6)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -106,27 +103,19 @@ GEM
       mime-types (~> 2.0)
     thor (0.19.1)
     tilt (2.0.1)
-    timers (4.1.1)
-      hitimes
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.2)
-    webmock (1.24.2)
+    webmock (1.20.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-      hashdiff
-    websocket-driver (0.6.3)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  httpclient
   json
-  json-schema
-  pacto
-  pacto-server
+  json-schema (~> 2.2.3)
+  pacto (= 0.4.0.rc1)
+  pacto-server (= 0.4.0.rc1)
   rspec
   sinatra
 
