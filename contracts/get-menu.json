@@ -5,7 +5,7 @@
       "Accept": "*/*"
     },
     "http_method": "get",
-    "path": "/ping"
+    "path": "/menu"
   },
   "response": {
     "headers": {
@@ -14,18 +14,38 @@
     "status": 200,
     "schema": {
       "$schema": "http://json-schema.org/draft-03/schema#",
-      "description": "Generated from http://localhost:5000/api/album/1/cover with shasum db640385d2b346db760dbfd78058101663197bcf",
-      "type": "string",
+      "description": "the schema for the GET menu API.",
+      "type": "object",
       "required": true,
-      "pattern": "pong"
+      "properties": {
+        "coffees": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 5,
+          "required": true,
+          "items": {
+            "type": "object",
+            "required": true
+          }
+        }
+      }
     }
   },
   "examples": {
     "default": {
       "request": {
+        "uri": "http://localhost:8080/menu"
       },
       "response": {
-        "body": "pong"
+        "body": "{
+          "coffees": [
+            {"long-black": "/order/long-black"},
+            {"flat-white": "/order/flat-white"},
+            {"cappacino": "/order/cappacino"},
+            {"espresso": "/order/espresso"},
+            {"machiato": "/order/machiato"}
+          ]
+        }"
       }
     }
   }

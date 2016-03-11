@@ -1,0 +1,52 @@
+{
+  {
+    "headers": {
+      "Accept-Encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+      "Accept": "*/*"
+    },
+    "http_method": "post",
+    "path": "/order/{coffee-name}"
+  },
+  "response": {
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8"
+    },
+    "status": 200,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-03/schema#",
+      "description": "the schema for the POST order API.",
+      "type": "object",
+      "required": true,
+      "properties": {
+        "coffees": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 5,
+          "required": true,
+          "items": {
+            "type": "object",
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "examples": {
+    "default": {
+      "request": {
+        "uri": "http://localhost:8080/menu"
+      },
+      "response": {
+        "body": "{
+          "coffees": [
+            {"long-black": "/order/long-black"},
+            {"flat-white": "/order/flat-white"},
+            {"cappacino": "/order/cappacino"},
+            {"espresso": "/order/espresso"},
+            {"machiato": "/order/machiato"}
+          ]
+        }"
+      }
+    }
+  }
+}
