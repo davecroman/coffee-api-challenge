@@ -1,5 +1,5 @@
 {
-  {
+  "request": {
     "headers": {
       "Accept-Encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
       "Accept": "*/*"
@@ -9,7 +9,7 @@
   },
   "response": {
     "headers": {
-      "Content-Type": "text/html; charset=utf-8"
+      "Content-Type": "application/json"
     },
     "status": 200,
     "schema": {
@@ -34,10 +34,10 @@
   "examples": {
     "default": {
       "request": {
-        "uri": "http://localhost:8080/menu"
+        "uri": "http://localhost:4567/menu"
       },
       "response": {
-        "body": "{
+        "body": {
           "coffees": [
             {"long-black": "/order/long-black"},
             {"flat-white": "/order/flat-white"},
@@ -45,7 +45,7 @@
             {"espresso": "/order/espresso"},
             {"machiato": "/order/machiato"}
           ]
-        }"
+        }
       }
     }
   }
