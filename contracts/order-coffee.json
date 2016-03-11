@@ -1,5 +1,5 @@
 {
-  {
+  "request": {
     "headers": {
       "Accept-Encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
       "Accept": "*/*"
@@ -9,24 +9,18 @@
   },
   "response": {
     "headers": {
-      "Content-Type": "text/html; charset=utf-8"
+      "Content-Type": "application/json"
     },
-    "status": 200,
+    "status": 201,
     "schema": {
       "$schema": "http://json-schema.org/draft-03/schema#",
       "description": "the schema for the POST order API.",
       "type": "object",
       "required": true,
       "properties": {
-        "coffees": {
-          "type": "array",
-          "uniqueItems": true,
-          "minItems": 5,
-          "required": true,
-          "items": {
-            "type": "object",
-            "required": true
-          }
+        "order": {
+          "type": "string",
+          "required": true
         }
       }
     }
@@ -34,18 +28,12 @@
   "examples": {
     "default": {
       "request": {
-        "uri": "http://localhost:8080/menu"
+        "uri": "http://localhost:4567/order/long-black"
       },
       "response": {
-        "body": "{
-          "coffees": [
-            {"long-black": "/order/long-black"},
-            {"flat-white": "/order/flat-white"},
-            {"cappacino": "/order/cappacino"},
-            {"espresso": "/order/espresso"},
-            {"machiato": "/order/machiato"}
-          ]
-        }"
+        "body": {
+          "order": "/order/123"
+        }
       }
     }
   }
