@@ -1,3 +1,11 @@
+Run: 
+- ruby coffee-api.rb
+- bundle exec rake pacto:validate['http://localhost:4567','contracts']
+
+
+
+
+
 Idea 
 - wrap the pacto tests in a docker container
 - get participants to pull down this repo
