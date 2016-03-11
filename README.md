@@ -1,3 +1,9 @@
+Idea 
+- wrap the pacto tests in a docker container
+- get participants to pull down this repo
+- give them a command like: docker run pacto-tests localhost:8080/
+- they run them, they go red, they make them pass
+
 Get Menu
 - return list of coffees
 - link to order each one
