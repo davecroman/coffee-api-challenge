@@ -45,6 +45,7 @@ post '/order/:coffee_id' do
   content_type :json
   status 201
   {
-    order: "/order/123"
+    order: "/order/123",
+    wait_time: "5"
   }.to_json
 end
