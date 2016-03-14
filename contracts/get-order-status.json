@@ -21,7 +21,7 @@
         "status": {
           "type": "string",
           "required": true,
-          "pattern": "^(READY|MAKING)$"
+          "pattern": "^(READY|MAKING|QUEUED)$"
         }
       }
     }
