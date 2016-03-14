@@ -5,7 +5,7 @@
       "Accept": "*/*"
     },
     "http_method": "get",
-    "path": "/order/{order-id}"
+    "path": "/order/{order_id}"
   },
   "response": {
     "headers": {
@@ -20,7 +20,8 @@
       "properties": {
         "status": {
           "type": "string",
-          "required": true
+          "required": true,
+          "pattern": "^(READY|MAKING)$"
         }
       }
     }

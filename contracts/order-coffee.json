@@ -5,7 +5,7 @@
       "Accept": "*/*"
     },
     "http_method": "post",
-    "path": "/order/{coffee-name}"
+    "path": "/order/{coffee_name}"
   },
   "response": {
     "headers": {
