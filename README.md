@@ -1,6 +1,11 @@
 ### The Challenge
 Create an API that passes the PACTO contract tests in this repository.
 
+### To run the contracts
+```bash
+bundle exec rake pacto:validate['https://your_api_url:port','contracts']
+```
+
 ### To Win
 ##### We will be looking for:
 - [Clean code](http://stackoverflow.com/questions/954570/definition-of-clean-code)
