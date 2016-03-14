@@ -26,7 +26,8 @@
           }
         },
         "pickup_time": {
-          "type": "ISO_DATE",
+          "type": "string",
+          "format": "date-time",
           "required": false
         }
       }
