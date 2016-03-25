@@ -78,6 +78,7 @@ GEM
       rack
     rack-respond_to (0.9.8)
       rack-accept-media-types (>= 0.6)
+    rake (10.4.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -116,8 +117,9 @@ DEPENDENCIES
   json-schema (~> 2.2.3)
   pacto (= 0.4.0.rc1)
   pacto-server (= 0.4.0.rc1)
+  rake
   rspec
   sinatra
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
