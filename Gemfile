@@ -8,6 +8,7 @@ gem 'pacto-server', '= 0.4.0.rc1'
 gem 'httpclient'
 gem 'json'
 gem 'sinatra'
+gem 'thin'
 
 # fix transitive dependencies that have new version which break pacto
 gem 'json-schema', '~> 2.2.3'
