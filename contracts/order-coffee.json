@@ -4,7 +4,7 @@
       "Content-Type": "application/json"
     },
     "http_method": "post",
-    "path": "/order/{coffee_name}",
+    "path": "/order/machiato",
     "schema": {
       "$schema": "http://json-schema.org/draft-03/schema#",
       "description": "Generated from http://localhost:4567/order/123 with shasum 90c74f5f4637058e877163d90cb306ec66a79eaa",
