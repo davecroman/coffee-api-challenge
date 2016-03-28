@@ -56,7 +56,7 @@
   "examples": {
     "default": {
       "request": {
-        "uri": "http://localhost:4567/menu"
+        "path": "/menu"
       },
       "response": {
         "body": {
