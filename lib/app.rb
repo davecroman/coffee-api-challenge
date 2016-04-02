@@ -23,7 +23,7 @@ module CoffeeStore
       halt 400, "Invalid id" unless validator.is_valid_order_id(id)
       content_type :json
       response_body = {
-        "status": "READY"
+        "status": inventory.order_status(id)
       }
       response_body.to_json
     end
