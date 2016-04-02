@@ -33,15 +33,13 @@ module CoffeeStore
       halt 400, "Coffee name not found" unless validator.is_valid_coffee_name(coffee_name)
 
       order_details = JSON.parse request.body.read
-
-      puts inventory.add_order(order_details, coffee_name)
+      order_id = inventory.add_order(order_details, coffee_name)
 
       content_type :json
-      
       status 201
       response_body = {
-        "order": "order/123",
-        "wait_time": 5
+        "order": "order/" + order_id.to_s,
+        "wait_time": 60
       }
 
       response_body.to_json

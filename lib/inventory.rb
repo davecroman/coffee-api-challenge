@@ -25,5 +25,9 @@ module CoffeeStore
       end
     end
 
+    def orders
+      @orders
+    end
+
   end
 end
