@@ -27,4 +27,4 @@ Our baristas ensure that it takes exactly 60 seconds to prepare any cup of coffe
 This is our first time doing a Ruby application from scratch so take all the implementation in this codebase with a grain of salt
 
 ### Authors
-Armond Ave and Michael Huzevka
+Armond Ave and Michal Huzevka
