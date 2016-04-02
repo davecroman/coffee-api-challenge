@@ -15,9 +15,9 @@ module CoffeeStore
       content_type :json
 
       response_body = {
-        "coffees": inventory.items
+        "coffees": inventory.menu_items
       }
-      
+
       response_body.to_json
     end
 
