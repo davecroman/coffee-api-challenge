@@ -1,28 +1,22 @@
+### To run the app and the contracts
+```bash
+./go.sh
+```
+
+### CI Pipeline
+[SNAP CI](https://snap-ci.com/davecroman/coffee-api-challenge/branch/master)
+
+### Production Endpoint
+https://coffee-store.herokuapp.com/menu
+
+### Service Guarantees
+Our baristas ensure that it takes exactly 60 seconds to prepare any cup of coffee no matter how large the queue is.
+
 ### The Challenge
 Create an API that passes the PACTO contract tests in this repository.
 
-### To run the contracts
-```bash
-bundle exec rake pacto:validate['https://your_api_url:port','contracts']
-```
+### Disclaimer
+This is our first time doing a Ruby application from scratch so take all the implementation in this codebase with a grain of salt
 
-### To Win
-##### We will be looking for:
-- [Clean code](http://stackoverflow.com/questions/954570/definition-of-clean-code)
-- Evidence of [TDD](http://www.extremeprogramming.org/rules/testfirst.html)
-- A [go script](https://www.thoughtworks.com/insights/blog/praise-go-script-part-i)
-- A [readme](https://robots.thoughtbot.com/how-to-write-a-great-readme)
-
-##### With extra credit for:
-- A CD pipeline (e.g. [SnapCI](https://www.snap-ci.com/))
-- A deployed API (e.g. [Heroku](https://www.heroku.com))
-- Submitting a solution as a pair
-
-### To Submit
-Feel free to paste a link to your solution github repo into the code challenge email thread or email one of the Software Shokunin Community organisers directly with a link.  
-
-If you don’t want to post code publicly we still encourage you to give the challenge a go!  Use the problem to exercise your skills, take your brain for a jog and work those typing muscles!!
-
-
-Peace and love fellow Shokunin
-
+### Authors
+Armond Ave and Michael Huzevka

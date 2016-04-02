@@ -1,1 +1,1 @@
-web: ruby app.rb
+web: (cd lib && ruby app.rb)
