@@ -1,4 +1,3 @@
-# myapp.rb
 require 'sinatra'
 require 'json'
 require './validator.rb'
@@ -33,9 +32,13 @@ module CoffeeStore
     post '/order/:coffee_name' do |coffee_name|
       halt 400, "Coffee name not found" unless validator.is_valid_coffee_name(coffee_name)
 
-      request_body = JSON.parse request.body.read
-      content_type :json
+      order_details = JSON.parse request.body.read
+      
 
+      puts inventory.add_order(order_details, coffee_name)
+
+      content_type :json
+      
       status 201
       response_body = {
         "order": "order/123",

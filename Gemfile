@@ -9,6 +9,7 @@ gem 'httpclient'
 gem 'json'
 gem 'sinatra'
 gem 'thin'
+gem 'test-unit'
 
 # fix transitive dependencies that have new version which break pacto
 gem 'json-schema', '~> 2.2.3'
