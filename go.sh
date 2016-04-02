@@ -9,11 +9,11 @@ function run_app {
 }
 
 function run_pacto_tests {
-	bundle exec rake pacto:validate['http://localhost:4567','contracts']
+	bundle exec rake pacto:validate['http://localhost:8080','contracts']
 }
 
 function kill_application {
-	kill -9 $(lsof -i:4567 | awk -F ' ' 'FNR == 2 {print $2}')
+	kill -9 $(lsof -i:8080 | awk -F ' ' 'FNR == 2 {print $2}')
 	echo "Sinatra app is now shutting down..."
 	sleep 2
 }
