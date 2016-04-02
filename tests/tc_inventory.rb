@@ -24,5 +24,19 @@ module CoffeeStore
       assert @inventory.orders[order_id].key?("time_of_order")
       assert @inventory.orders[order_id]["time_of_order"].class == Time
     end
+
+    def test_order_status_should_return_WAITING_if_time_elapsed_less_than_60_seconds
+      order_id = @inventory.add_order({}, "coffee")
+
+      assert @inventory.order_status(order_id) == "WAITING"
+    end
+
+    def test_order_status_should_return_READY_if_time_elapsed_greater_than_59_seconds
+      order_id = @inventory.add_order({}, "coffee")
+
+      @inventory.orders[order_id]["time_of_order"] -= 60
+
+      assert @inventory.order_status(order_id) == "READY"
+    end
   end
 end
