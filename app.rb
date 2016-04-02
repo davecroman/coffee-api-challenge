@@ -17,6 +17,7 @@ module CoffeeStore
       response_body = {
         "coffees": inventory.items
       }
+      
       response_body.to_json
     end
 
