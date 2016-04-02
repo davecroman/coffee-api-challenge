@@ -12,5 +12,11 @@ module CoffeeStore
       order_id = @inventory.add_order({}, "coffee")
       assert order_id == 1
     end
+
+    def test_add_order_increments_order_id
+      @inventory.add_order({}, "coffee")
+      order_id = @inventory.add_order({}, "coffee")
+      assert order_id == 2
+    end
   end
 end
