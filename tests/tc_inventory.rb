@@ -9,7 +9,8 @@ module CoffeeStore
     end
 
     def test_add_order_returns_order_id
-      assert true
+      order_id = @inventory.add_order({}, "coffee")
+      assert order_id == 1
     end
   end
 end
