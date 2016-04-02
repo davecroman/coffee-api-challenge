@@ -3,7 +3,6 @@ require 'json'
 require './validator.rb'
 require './inventory.rb'
 
-
 module CoffeeStore
   class Application < Sinatra::Base
 

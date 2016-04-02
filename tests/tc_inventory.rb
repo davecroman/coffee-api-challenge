@@ -18,5 +18,11 @@ module CoffeeStore
       order_id = @inventory.add_order({}, "coffee")
       assert order_id == 2
     end
+
+    def test_add_order_should_add_time_of_order
+      order_id = @inventory.add_order({}, "coffee")
+      assert @inventory.orders[order_id].key?("time_of_order")
+      assert @inventory.orders[order_id]["time_of_order"].is_a Time
+    end
   end
 end
