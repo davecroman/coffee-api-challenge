@@ -44,7 +44,6 @@ module CoffeeStore
       response_body.to_json
     end
 
-    set :port, 8080
     run!
   end
 end
