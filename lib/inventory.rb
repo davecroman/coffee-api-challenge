@@ -17,6 +17,7 @@ module CoffeeStore
 
     def add_order(order_details, coffee_name)
       order_details["coffee_name"] = coffee_name
+      order_details["time_of_order"] = Time.new
       @orders[@order_counter] = order_details
       begin
       	@order_counter

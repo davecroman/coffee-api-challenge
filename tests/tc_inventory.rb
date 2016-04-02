@@ -22,7 +22,7 @@ module CoffeeStore
     def test_add_order_should_add_time_of_order
       order_id = @inventory.add_order({}, "coffee")
       assert @inventory.orders[order_id].key?("time_of_order")
-      assert @inventory.orders[order_id]["time_of_order"].is_a Time
+      assert @inventory.orders[order_id]["time_of_order"].class == Time
     end
   end
 end
