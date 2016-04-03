@@ -1,5 +1,4 @@
 [![Build Status](https://snap-ci.com/davecroman/coffee-api-challenge/branch/master/build_image)](https://snap-ci.com/davecroman/coffee-api-challenge/branch/master)
-[![Heroku](https://heroku-badge.herokuapp.com/?app=coffee-store)]
 
 ## Running Scripts
 
