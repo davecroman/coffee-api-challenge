@@ -1,30 +1,36 @@
-### To run the app and the contracts
+## Running Scripts
+
+### To run the app, unit tests, and the contracts
 ```bash
 ./go.sh
 ```
 
+### To run the app
+```bash
+./go.sh run-app
+```
+
 ### To run only unit tests
 ```bash
-bundle exec rake test
+./go.sh unit-test
 ```
 
 ### To run only the contracts
 ```bash
-bundle exec rake pacto:validate['http://localhost:4567','contracts']
+./go.sh pacto-test
 ```
 
-
-### CI Pipeline
+## CI Pipeline
 https://snap-ci.com/davecroman/coffee-api-challenge/branch/master
 
-### Production Endpoint
-https://coffee-store.herokuapp.com/menu
+## Production Endpoint
+https://coffee-store.herokuapp.com/
 
-### Service Guarantees
+## Service Guarantees
 Our baristas ensure that it takes exactly 60 seconds to prepare any cup of coffee no matter how long the queue is.
 
-### Disclaimer
+## Disclaimer
 This is our first time doing a Ruby application from scratch so take all the implementation in this codebase with a grain of salt
 
-### Authors
+## Authors
 Armond Ave and Michal Huzevka

@@ -20,16 +20,26 @@ function kill_application {
 
 bundle install
 
-if run_unit_tests ; then
+if [ "$1" == 'unit-test' ]; then
+	run_unit_tests
+elif [ "$1" == 'pacto-test' ]; then
 	run_app
 	run_pacto_tests
-	echo "SUCCESS!!!"
+	kill_application
+elif [ "$1" == 'run-app' ]; then
+	run_app
 else
-	echo "Test failed" 1
+	if run_unit_tests ; then
+		run_app
+		run_pacto_tests
+		echo "SUCCESS!!!"
+	else
+		echo "Test failed" 1
+	fi
 	kill_application
 fi
 
-kill_application
+
 
 
 

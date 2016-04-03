@@ -19,6 +19,10 @@ module CoffeeStore
       @menu_items
     end
 
+    def orders
+      @orders
+    end
+
     def add_order(order_details, coffee_name)
       order_details["coffee_name"] = coffee_name
       order_details["time_of_order"] = Time.new
@@ -28,10 +32,6 @@ module CoffeeStore
       ensure
         @order_counter += 1
       end
-    end
-
-    def orders
-      @orders
     end
 
     def order_status(order_id)

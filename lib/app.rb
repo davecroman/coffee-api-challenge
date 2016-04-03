@@ -38,7 +38,7 @@ module CoffeeStore
       status 201
       response_body = {
         "order": "order/" + order_id.to_s,
-        "wait_time": 60
+        "wait_time": CoffeeInventory::SECONDS_NEEDED_TO_MAKE_COFFEE
       }
 
       response_body.to_json
