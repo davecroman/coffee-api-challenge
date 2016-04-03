@@ -18,6 +18,8 @@ function kill_application {
 	sleep 2
 }
 
+bundle install
+
 if run_unit_tests ; then
 	run_app
 	run_pacto_tests
