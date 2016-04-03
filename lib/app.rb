@@ -9,6 +9,10 @@ module CoffeeStore
     validator = Validator.new
     inventory = CoffeeInventory.new
 
+    get '/' do
+      'Welcome, to the coffee store!'
+    end
+    
     get '/menu' do
       content_type :json
 
